@@ -167,10 +167,11 @@ final class ApplicationForWrapperWorker
         }
 
         new ProgressPrinter(
-            new ProgressPrinterOutput(
-                DefaultPrinter::from($this->progressFile),
-                DefaultPrinter::from($this->unexpectedOutputFile),
-            ),
+            DefaultPrinter::standardOutput(),
+//            new ProgressPrinterOutput(
+//                DefaultPrinter::from($this->progressFile),
+//                DefaultPrinter::from($this->unexpectedOutputFile),
+//            ),
             EventFacade::instance(),
             false,
             120,

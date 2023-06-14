@@ -56,6 +56,10 @@ use ParaTest\WrapperRunner\WrapperWorker;
         isset($getopt['testdox-color']),
     );
 
+    $exitCode = $application->runTest('test/fixtures/function_parallelization_tests/FunctionalParallelizationTest.php'."\0".'testDataProvider2@test2 with '."\0".' within');
+    $application->end();
+    exit($exitCode);
+
     while (true) {
         if (feof(STDIN)) {
             $application->end();

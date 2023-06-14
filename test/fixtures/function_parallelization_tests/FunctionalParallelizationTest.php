@@ -23,17 +23,17 @@ final class FunctionalParallelizationTest extends TestCase
     public static function dataProvider2(): array
     {
         return [
-            'test1 with spaces' => ['a', 'a'],
-            "test2 with \0" => ['b', 'b'],
-            'test3' => ['c', 'c'],
+//            'test1 with spaces' => ['a', 'a'],
+            "test2 with \0 within" => ['b', 'b'],
+//            'test3' => ['c', 'c'],
         ];
     }
 
-    /** @dataProvider dataProvider1 */
-    public function testDataProvider1(string $a, string $b): void
-    {
-        self::assertEquals($a, $b);
-    }
+//    /** @dataProvider dataProvider1 */
+//    public function testDataProvider1(string $a, string $b): void
+//    {
+//        self::assertEquals($a, $b);
+//    }
 
     /** @dataProvider dataProvider2 */
     public function testDataProvider2(string $a, string $b): void
